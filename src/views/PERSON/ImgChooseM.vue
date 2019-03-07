@@ -1,6 +1,5 @@
 <template>
   <div class="ImgChooseM">
-   	 			
 			<div class="demo-upload-list" v-for="item in uploadList">
 				        <template v-if="item.status === 'finished'">
 				            <img :src="item.url">

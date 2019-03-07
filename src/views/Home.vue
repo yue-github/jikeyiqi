@@ -1,5 +1,6 @@
 <template>
   <div class="home">
+  	<Icon type="bug"></Icon>
       <header class="header">
       		<router-link to="/Search?where=home" class="search" type="search">请输入你要搜索的内容</router-link>
       		<img src="../assets/home/search.jpg" alt="" class="searchImg" @click='gotoSearch()'>
@@ -445,29 +446,29 @@ export default {
   	// 	console.log(res);
   	// })
   	// 用于开发登录
-	let promise=new Promise((resolve,reject)=>{
-	  		this.$axios.post("http://localhost/vc/public/api/user/login",{
-	  	    email:"1443250458@qq.com",
-	  		password:'123'
-	  	})
-	  	.then((data)=>{
-	  		resolve(data)
-	  	})
-  	})
-  	promise.then(res=>{
-  		// 用于测试
-  		this.$store.state.tok=res.data.token;
-  		console.log(this.$store.state.tok);
-  		// return false;
-  		this.$axios.post('http://localhost/vc/public/api/vcTest',{
-  			// id:12,
-  			// id:12,
-  			// token:this.$store.state.tok
-  		})
-	  	.then((data)=>{
-	  		console.log(data)
-	  	})
-  	})
+	// let promise=new Promise((resolve,reject)=>{
+	//   		this.$axios.post("http://localhost/vc/public/api/user/login",{
+	//   	    email:"1443250458@qq.com",
+	//   		password:'123'
+	//   	})
+	//   	.then((data)=>{
+	//   		resolve(data)
+	//   	})
+ //  	})
+  	// promise.then(res=>{
+  	// 	// 用于测试
+  	// 	this.$store.state.tok=res.data.token;
+  	// 	console.log(this.$store.state.tok);
+  	// 	// return false;
+  	// 	this.$axios.post('http://localhost/vc/public/api/vcTest',{
+  	// 		// id:12,
+  	// 		// id:12,
+  	// 		// token:this.$store.state.tok
+  	// 	})
+	  // 	.then((data)=>{
+	  // 		console.log(data)
+	  // 	})
+  	// })
   
   	
   	// this.$axios.post("http://localhost/appPHP/public/api/GetFilterChild",{
